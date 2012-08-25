@@ -1,0 +1,36 @@
+#+TITLE:     Simple Presentation
+#+AUTHOR:    ele
+#+EMAIL:     lijiele@ubuntu
+#+DATE:      2012-08-25 Sat
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:   
+#+LINK_HOME: 
+#+XSLT:
+#+startup: beamer
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [bigger]
+#+BEAMER_FRAME_LEVEL: 2
+#+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
+#+latex_header: \mode<beamer>{\usetheme{etaodata}}
+
+
+* Simple Presentation
+** First Page
+Short instruction about this presentation.
+** Second Page
++ Item list 1
++ Item list 2
++ Item list 3
+** Third Page
+1. Number list 1
+2. Number list 2
+3. Number list 3
+** End
+\huge Bye

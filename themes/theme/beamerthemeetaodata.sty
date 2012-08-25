@@ -13,26 +13,36 @@
 \useoutertheme{etaodata}
 
 \setbeamertemplate{background}
- {\includegraphics[width=\paperwidth,height=\paperheight]{slide-bg}}
+ {
+   \ifnum\c@framenumber=1%
+   % On title page
+   \includegraphics[width=\paperwidth,height=\paperheight]{frontpage-bg}
+   \else%
+   % Other frames background
+   \includegraphics[width=\paperwidth,height=\paperheight]{slide-bg}
+   \fi%
 
-\RequirePackage{tikz}
+%   \includegraphics[width=\paperwidth,height=\paperheight]{slide-bg}
+ }
 
-\addtobeamertemplate{title page}{\vspace{3\baselineskip}}{}
+%\RequirePackage{tikz}
 
-\addtobeamertemplate{title page}{
-    \begin{tikzpicture}[remember picture,overlay]
-        \node [xshift=0cm,yshift=0cm] at (current page.center) {
-            \includegraphics[width=\paperwidth, height=\paperheight]{frontpage-bg}
-        };
-%        \node [xshift=0cm,yshift=0cm] at (0.1\paperwidth,-0.78\paperheight) {
-%            \includegraphics[width=3cm]{etao-data}
+%\addtobeamertemplate{title page}{\vspace{3\baselineskip}}{}
+
+%\addtobeamertemplate{title page}{
+%    \begin{tikzpicture}[remember picture,overlay]
+%        \node [xshift=0cm,yshift=0cm] at (current page.center) {
+%            \includegraphics[width=\paperwidth, height=\paperheight]{frontpage-bg}
 %        };
-    \end{tikzpicture}
-}{}
+%%        \node [xshift=0cm,yshift=0cm] at (0.1\paperwidth,-0.78\paperheight) {
+%%            \includegraphics[width=3cm]{etao-data}
+%%        };
+%    \end{tikzpicture}
+%}{}
 
 
 % color definitions
-\definecolor{uipaleblue}{RGB}{96,123,139}
+\definecolor{uipaleblue}{RGB}{35, 136, 187}
 \definecolor{uipoppy}{RGB}{225,64,0}
 
 % set the title color
@@ -55,7 +65,7 @@
 }
 
 
-\setbeamersize{text margin left=1em,text margin right=1em}
+\setbeamersize{text margin left=3.2em,text margin right=3em}
 \setbeamersize{frametitle=\huge}
 
 \ifbeamer@secheader\else\setbeamertemplate{headline}[default]\fi
