@@ -18,5 +18,5 @@ This project is about the Beamer theme.
 
     rsync -avz themes $TEXMFHOME/tex/latex/beamer/base/themes/
 
-# Problems
-* Background images lost occasionally.[wtf]
+# Issues
+* [solved] Background images lost occasionally.[wtf]
