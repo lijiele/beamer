@@ -1,0 +1,54 @@
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 3.
+
+\mode<presentation>
+
+\newif\ifbeamer@secheader
+\beamer@secheaderfalse
+
+\DeclareOptionBeamer{secheader}{\beamer@secheadertrue}
+\ProcessOptionsBeamer
+
+
+\useoutertheme{merchantdata}
+
+\setbeamertemplate{background}
+{
+	\ifnum\c@framenumber=1%
+	% On title page
+	\includegraphics[width=\paperwidth,height=\paperheight]{merchantdata/cover.png}
+	\else%
+	% Other frames background
+	\includegraphics[width=\paperwidth,height=\paperheight]{merchantdata/page.png}
+	\fi%
+}
+
+% set the title color
+\setbeamercolor{frametitle}{fg=black}
+\setbeamercolor{title}{fg=black}
+
+% set colors for specific elements
+\setbeamercolor{block}{fg=black}
+\setbeamercolor{block title}{fg=black}
+\setbeamercolor{block item}{fg=black}
+\setbeamercolor{itemize item}{fg=black}
+\setbeamercolor{section in toc}{fg=black}
+
+% frame title styling
+\setbeamertemplate{frametitle}[default][right]
+
+\usesubitemizeitemtemplate{%
+	\tiny\raise1.5pt\hbox{\color{beamerstructure}$\blacktriangleright$}%
+}
+\usesubsubitemizeitemtemplate{%
+	\tiny\raise1.5pt\hbox{\color{beamerstructure}$\bigstar$}%
+}
+
+
+\setbeamersize{text margin left=3.2em,text margin right=3em}
+\setbeamersize{frametitle=\huge}
+
+\ifbeamer@secheader\else\setbeamertemplate{headline}[default]\fi
+
+\mode
+<all>
